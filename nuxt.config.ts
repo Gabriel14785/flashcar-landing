@@ -1,9 +1,14 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss'],
   css: ['~/assets/css/main.css'],
+  ssr: true,
+  nitro: {
+    preset: 'static'
+  },
   app: {
+    baseURL: '/',
     head: {
       title: 'FlashCar | Funilaria e Pintura Profissional',
       meta: [
@@ -15,14 +20,11 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'FlashCar | Funilaria e Pintura Profissional' },
         { property: 'og:description', content: 'Seu carro novo de novo em tempo recorde. Funilaria, pintura, mecânica e muito mais com rapidez, qualidade e preço justo.' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://flashcar.com.br' },
-        { property: 'og:image', content: 'https://images.unsplash.com/photo-1619405399517-d7fce0f15410?w=1200&q=80' },
         { property: 'og:locale', content: 'pt_BR' },
         { property: 'og:site_name', content: 'FlashCar' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'FlashCar | Funilaria e Pintura Profissional' },
         { name: 'twitter:description', content: 'Seu carro novo de novo em tempo recorde.' },
-        { name: 'twitter:image', content: 'https://images.unsplash.com/photo-1619405399517-d7fce0f15410?w=1200&q=80' },
         { name: 'theme-color', content: '#0f0f0f' }
       ],
       link: [

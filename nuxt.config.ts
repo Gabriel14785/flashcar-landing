@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     preset: 'static'
   },
   app: {
-    baseURL: '/',
+    baseURL: '/flashcar-landing/',
     head: {
       title: 'FlashCar | Funilaria e Pintura Profissional',
       meta: [
